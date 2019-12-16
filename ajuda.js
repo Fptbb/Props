@@ -1,4 +1,4 @@
-//Sistema de ajuda para bots no discord extremamente automatizado, usem o proprio handler é sistema de cache caso queira usar é o sistema de paginação
+//Sistema de ajuda para bots no discord extremamente automatizado, usem o proprio handler é sistema de cache é paginação caso queira usar
 var {randomQuest,Pagina} = require('../../modulos/index')
 module.exports = {
     comando: 'ajuda',
