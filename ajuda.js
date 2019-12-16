@@ -1,5 +1,5 @@
-//Sistema de ajuda para bots no discord extremamente automatizado, usem o proprio handler é sistema de cache caso queira usar
-var {randomQuest,RC} = require('../../modulos/index')
+//Sistema de ajuda para bots no discord extremamente automatizado, usem o proprio handler é sistema de cache caso queira usar é o sistema de paginação
+var {randomQuest,Pagina} = require('../../modulos/index')
 module.exports = {
     comando: 'ajuda',
     args: "[comando]",
@@ -96,7 +96,7 @@ module.exports = {
             c.HelpData.status = true
         }
         if(!c1){
-            const buttons = []
+            const botoes = []
             new Promise(async function(resolve, reject) {
                 await Promise.all(embeds.map(async (embed) => {
                     if(await embed.embed == 'embed'){
@@ -127,8 +127,8 @@ module.exports = {
                 }));
                 await resolve();
             }).then(function() {
-                let helpM = new RC.Menu(help, buttons, {owner: message.author.id})
-                message.author.sendMenu(helpM).then(()=>{
+                let menu = new Pagina.Menu(help, botoes, {owner: message.author.id})
+                message.author.enviar(menu).then(()=>{
                     if(message.guild === null) return;
                     functions.embed(`Verifique suas mensagens privadas.`,`sucesso`,call)
                     return;
@@ -141,7 +141,7 @@ module.exports = {
                         return;
                     }
                 });
-                handlerreactions.addMenus(helpM)
+                handlerreactions.adicionar(helpM)
             });
         }else if(c1){
             var find = Array.from(comandos).find(x=>x[1].comando == c1 || typeof x[1].aliases == 'object' && x[1].aliases.filter(function (el) {return typeof el == 'string'}).indexOf(c1) != -1)
