@@ -141,7 +141,7 @@ module.exports = {
                         return;
                     }
                 });
-                handlerreactions.adicionar(helpM)
+                handlerreactions.adicionar(menu)
             });
         }else if(c1){
             var find = Array.from(comandos).find(x=>x[1].comando == c1 || typeof x[1].aliases == 'object' && x[1].aliases.filter(function (el) {return typeof el == 'string'}).indexOf(c1) != -1)
