@@ -23,7 +23,7 @@ if($Result -eq "Yes") {
 	#Baixa
 	echo "Baixando $output"
 	$wc = New-Object System.Net.WebClient
-	$wc.DownloadFile($url, $output)
+	$wc.DownloadFile($url, ".\$output")
 
 	#Remove todo o resto exceto a pasta data, script Update.ps1 e arquivo baixado
 	echo "Limpando instalacao..."
