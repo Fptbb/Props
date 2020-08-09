@@ -1,6 +1,6 @@
 #Variaveis
 $ProgressPreference="SilentlyContinue"
-$url = "https://go.microsoft.com/fwlink/?Linkid=850641"
+$url = "https://vscode-update.azurewebsites.net/latest/win32-x64-archive/stable"
 $output = "vscode.zip"
 $DataFolder = "data"
 
