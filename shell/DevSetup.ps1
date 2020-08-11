@@ -1,5 +1,6 @@
 #By Fptbb
 #Configura VSCode, Git e Nodejs (Latest) na maquina e seta os Paths
+$arch = "64" #64x ou 86x
 
 function download {
     param (
@@ -26,10 +27,10 @@ function download {
 
 #Set download links that is stable (Update)
 
-#https://github.com/git-for-windows/git/releases
-$PortableGit = "https://fptbb.com/program/latest/PortableGit?arch=64"
-#https://nodejs.org/en/download/current/
-$NodeFile = "https://fptbb.com/program/latest/Node?arch=64"
+#Vai baixar a ultima versão do git
+$PortableGit = "https://fptbb.com/program/latest/PortableGit?arch=$arch"
+#Vai baixar a ultima versão do node latest, adicione &version=lts caso queira a Long Term Support
+$NodeFile = "https://fptbb.com/program/latest/Node?arch=$arch"
 
 Set-ExecutionPolicy Bypass -Scope Process -Force;
 download -RemoteFile "https://go.microsoft.com/fwlink/?Linkid=850641" -DownloadFile $env:Temp"\vscode.zip" -DoExtractFile $true -AddedPath $env:LOCALAPPDATA"\VsCode"
