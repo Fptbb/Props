@@ -29,7 +29,7 @@ function download {
 #https://github.com/git-for-windows/git/releases
 $PortableGit = "https://fptbb.com/program/latest/PortableGit?arch=64"
 #https://nodejs.org/en/download/current/
-$NodeFile = "https://nodejs.org/dist/v14.7.0/node-v14.7.0-win-x64.zip"
+$NodeFile = "https://fptbb.com/program/latest/Node?arch=64"
 
 Set-ExecutionPolicy Bypass -Scope Process -Force;
 download -RemoteFile "https://go.microsoft.com/fwlink/?Linkid=850641" -DownloadFile $env:Temp"\vscode.zip" -DoExtractFile $true -AddedPath $env:LOCALAPPDATA"\VsCode"
