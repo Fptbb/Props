@@ -14,7 +14,9 @@ function download {
     Write-Host $RemoteFile
 	Write-Host $DownloadFile
 
-	Invoke-WebRequest -Uri $RemoteFile -OutFile $DownloadFile
+	$wc = New-Object System.Net.WebClient
+	$wc.DownloadFile($RemoteFile, $DownloadFile)
+	
 	If ($DoExtractFile){
 	  Expand-Archive $DownloadFile -DestinationPath $AddedPath -Force
 	}
