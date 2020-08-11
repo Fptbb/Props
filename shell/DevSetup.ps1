@@ -27,7 +27,7 @@ function download {
 #Set download links that is stable (Update)
 
 #https://github.com/git-for-windows/git/releases
-$PortableGit = "https://fptbb.com/program/latest/PortableGit"
+$PortableGit = "https://fptbb.com/program/latest/PortableGit?arch=64"
 #https://nodejs.org/en/download/current/
 $NodeFile = "https://nodejs.org/dist/v14.7.0/node-v14.7.0-win-x64.zip"
 
