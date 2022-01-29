@@ -13,7 +13,7 @@ if(Storage && window.localStorage && window.localStorage instanceof Storage) {
         function rickroller(event) {
             //console.info("Rickrolling!");
             if(localStorage.VAt) {
-                console.warn("Rickrolling canceled!");
+                //console.warn("Rickrolling canceled!");
                 return true;
             }
             // Remember that user was rickrolled
